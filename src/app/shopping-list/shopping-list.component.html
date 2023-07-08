@@ -1,1 +1,9 @@
-<p>shopping-list works!</p>
+<h2>Lista de compras:</h2>
+
+<ul>
+  <li *ngFor="let item of items"> {{ item }}</li>
+</ul>
+
+<p *ngIf="items.length === 0">Nenhum item na lista.</p>
+
+<app-add-item (itemAdded)="onItemAdded($event)"></app-add-item>
